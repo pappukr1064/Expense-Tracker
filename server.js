@@ -37,6 +37,7 @@ app.get("*", function (req, res) {
 const PORT = process.env.PORT || 8080;
 
 //listen server
+// Starts the backend server on the defined port and logs the message to the console
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
