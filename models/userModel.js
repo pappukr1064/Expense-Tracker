@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+//It helps to  define schemas (structure) for documents and interact with the database.
+
 
 //schema design
 const userSchema = new mongoose.Schema(
