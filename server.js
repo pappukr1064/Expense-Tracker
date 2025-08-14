@@ -8,11 +8,12 @@ const connectDb = require("./config/connectDb");
 // config dot env file
 dotenv.config();
 
-//databse call
-connectDb();
+//database call
+//Calls our MongoDB connection function so that the backend connects to the database before handling any requests.
+connectDb();   
 
 //rest object
-const app = express();
+const app = express(); //initializing the express app
 
 //middlewares
 app.use(morgan("dev"));
@@ -33,7 +34,7 @@ app.get("*", function (req, res) {
 });
 
 //port
-const PORT = 8080 || process.env.PORT;
+const PORT = process.env.PORT || 8080;
 
 //listen server
 app.listen(PORT, () => {
